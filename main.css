@@ -1,0 +1,427 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e6e8ed;
+    color: #666666;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+  }
+  
+  .text-primary {
+    color: #666666;
+  }
+  
+  .text-blue {
+    color: #246dec;
+  }
+  
+  .text-red {
+    color: #cc3c43;
+  }
+  
+  .text-green {
+    color: #367952;
+  }
+  
+  .text-orange {
+    color: #f5b74f;
+  }
+  
+  .font-weight-bold {
+    font-weight: 600;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 230px 1fr 1fr 1fr;
+    grid-template-rows: 0fr 3fr;
+    grid-template-areas:
+      "sidebar header header header"
+      "sidebar main main main";
+    height: 140vh;
+  }
+  
+  
+  /* ---------- HEADER ---------- */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+  .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+   .hamburger-menu {
+      width: 30px;
+      height: 1px;
+      background-color: #333;
+      margin-right: 10px;
+    }
+    
+    .search-bar {
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+  
+    .search-bar input[type="text"] {
+      border: none;
+      outline: none;
+      padding: 6px;
+      width: 200px;
+    }
+    
+    .search-button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 4px;
+    }
+    
+    .search-button img {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+    
+    .time {
+      margin-left: 2px;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    
+    .settings-button,
+    .settings-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #333;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-right: 6px;
+    }
+    
+    .logos-image {
+      width: 40px;
+      height: 35px;
+      margin-right: 8px;
+    }
+    .profile-image {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .profile-name {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  
+  /* ---------- SIDEBAR ---------- */
+  
+  #sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+  .sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    
+  }
+  .titles{
+      display: flex;  
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18%;
+      padding: 12px;   
+  }
+  .pictures {
+      width: 40px;
+      height: 40px;
+  }
+  .hide {
+    display:none;    
+  }  
+  .pictures:hover + .hide {
+    display: block;
+    color: black;
+  }
+  .titles:hover,
+  .titles.hovered {
+    background-color: var(white);
+    border-style: none solid;
+    border-width: 6px;
+    border-color: rgb(236, 0, 236);
+    border-radius: 10px;
+  }
+ 
+  .sidebar-list-item > a {
+    text-decoration: none;
+    color: #9799ab;
+  }
+  
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    /*
+      the z-index of the ApexCharts is 11
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+    z-index: 12 !important;
+  }
+  
+  
+  /* ---------- MAIN ---------- */
+  
+  .main-container {
+    grid-area: main;
+    overflow-y: auto;
+  }
+  
+  .main-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-title > p {
+    font-size: 10px;
+  }
+  
+  .main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d3;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card:first-child {
+    border-left: 7px solid #246dec;
+  }
+  
+  .card:nth-child(2) {
+    border-left: 7px solid #f5b74f;
+  }
+  
+  .card:nth-child(3) {
+    border-left: 7px solid #367952;
+  }
+  
+  .card:nth-child(4) {
+    border-left: 7px solid #cc3c43;
+  }
+  
+  .card > span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-inner > p {
+    font-size: 15px;
+  }
+  
+  .card-inner > span {
+    font-size: 15px;
+  }
+  
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    
+  }
+  
+  .charts-card {
+    background-color: #ffff;
+    margin-bottom: 5px;
+    -webkit-column-break-inside: avoid;
+    border: 1px solid #d2d2d3;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .line1{
+    display: flex;
+    flex-direction: row;
+    background-color:white;
+    justify-content:space-evenly;
+    align-items: center;   
+  }
+  .line2{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .line3{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    justify-content:space-evenly;
+    align-items: center; 
+    padding: 10px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+
+  .details {
+    position: relative;
+  
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: white;
+  }
+  .details .recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 200px;
+    background: var(--white);
+    padding: 10px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  .details .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cardHeader h4 {
+    font-weight: 600;
+    color: var(black);
+  }
+  .cardHeader span{
+    padding: 10px;
+  }
+
+  .details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+  .details table thread td {
+    font-weight: 600;
+  }
+  .details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .details .recentOrders table tr td {
+    padding: 10px;
+  }
+  .details .recentOrders table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+  .details .recentOrders table tr:last-child {
+    border-bottom: none;
+  }
+  .details .recentOrders table tr td:last-child(2) {
+    text-align: end;
+  }
+  .details .recentOrders table tr td:last-child(3) {
+    text-align: center;
+  }
+
+  
+  /* ---------- MEDIA QUERIES ---------- */
+  
+  
+  /* Medium <= 992px */
+  @media screen and (max-width: 892px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        "header"
+        "main";
+    }
+  
+    #sidebar {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: inline;
+    }
+  
+    .sidebar-title > span {
+      display: inline;
+    }
+  }
+  
+  /* Small <= 768px */
+  @media screen and (max-width: 768px) {
+    .main-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+  
+    .charts {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+    }
+  }
+  
+  /* Extra Small <= 576px */
+  @media screen and (max-width: 576px) {
+    .header-left {
+      display: none;
+    }
+  }

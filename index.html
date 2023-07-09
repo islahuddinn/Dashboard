@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Admin Dashboard</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="#" class="logo"><img class="logos-image" src="images/logo1.png" alt=""></a>
+      <div class="hamburger-menu"></div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button class="search-button"><img src="images/search-icon.png" alt="Search"></button>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="profile">
+        <img src="images/settings.svg" alt="Profile Image" class="profile-image">
+        <div class="settings-icon"></div>
+        <img src="images/profile.png" alt="Profile Image" class="profile-image">
+        <div class="profile-name">T. Joblonski</div>
+        <div class="time">12:00 PM</div>
+      </div>
+    </div>
+  </nav>
+  <div class="grid-container">
+
+
+    <!-- Header -->
+    <!--       <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+       -->
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <img src="images/profile.png" alt="Profile Image" class="profile-image">
+        <div class="profile-name">T. Joblonski</div>
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+      </div>
+
+      <div class="sidebar-list">
+        <div class="titles">
+          <img class="pictures" src="images/desktop.svg" alt="">
+          <h4 class="hide">Dashboard</h4>
+
+        </div>
+        <div class="titles">
+          <img class="pictures" src="images/message.png" alt="">
+          <h4 class="hide">Messages</h4>
+
+        </div>
+        <div class="titles">
+          <img class="pictures" src="images/buyer-personna.png" alt="">
+          <h4 class="hide">Buyer Persona</h4>
+
+        </div>
+        <div class="titles">
+          <img class="pictures" src="images/settings.svg" alt="">
+          <h4 class="hide">Settings</h4>
+
+        </div>
+      </div>
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-cards">
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Total visitors</p>
+           <img class="pictures" src="images/crowed.png" alt="">
+          </div>
+          <span class="text-primary font-weight-bold">38</span>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Male vs Female</p>
+            <img class="pictures" src="images/male-female.jpg" alt="">
+          </div>
+          <span class="text-primary font-weight-bold">59/125</span>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Avg. Age</p>
+            <img class="pictures" src="images/sand-clock.jpg" alt="">
+            
+          </div>
+          <span class="text-primary font-weight-bold">87</span>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <p class="text-primary">Avg. Time</p>
+            <img class="pictures" src="images/clock.png" alt="">
+            
+          </div>
+          <span class="text-primary font-weight-bold">43</span>
+        </div>
+
+      </div>
+
+      <div class="charts">
+
+        <div class="charts-card">
+          <p class="chart-title">Statistics</p>
+          <div id="bar-chart"></div>
+        </div>
+
+        <div class="charts-card">
+          <p class="chart-title">Analysis</p>
+          <div id="area-chart"></div>
+        </div>
+
+      </div>
+      <div class="line2">
+        <h6>Male vs Female</h6>
+        <h6>Avg. Dwell Time</h6>
+        <span class="material-icons-outlined">more</span>
+        <h6>Age. Group</h6>
+        <span class="material-icons-outlined">see more</span>
+
+        
+      </div>  
+      <div class="line1">
+        <img style="width: 15%; height: 15%;" src="images/men-women-symbol.jpg" alt="">
+        <img style="width: 15%; height: 15%;"  src="images/circle-image.png" alt="">
+        <img style="width: 28%; height: 30%; "  src="images/wawy-graph.png" alt="">
+      </div>
+
+   
+
+       <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h4>Nationality</h4>
+        <span class="material-icons-outlined">more</span>
+                
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Vedio1</td>
+                        <td>0:00-14:59</td>
+                        <td>14:59-29:59</td>
+                        <td>29:59-44:59</td>
+                        <td>44:59-59:00</td>
+                        <td>60:00-0:00</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cucasian%</td>
+                        <td>345</td>
+                        <td>488</td>
+                        <td>298</td>
+                        <td>450</td>
+                        <td>987</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Black%</td>
+                        <td>329</td>
+                        <td>987</td>
+                        <td>987</td>
+                        <td>478</td>
+                        <td>948</td>
+                      
+                    </tr>
+                    <tr>
+                        <td>Hispanic%</td>
+                        <td>498</td>
+                        <td>293</td>
+                        <td>599</td>
+                        <td>348</td>
+                        <td>376</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Asian%</td>
+                        <td>300</td>
+                        <td>2.45</td>
+                        <td>454</td>
+                        <td>577</td>
+                        <td>879</td>
+                        
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        <div class="line3">
+          <img style="width: 20%; height: 20%; "  src="images/upset-icon.png" alt="">
+          <h3>45 %</h3>
+          <img style="width: 20%; height: 20%; "  src="images/seriouse-icon.png" alt="">
+          <h3>35 %</h3>
+          <img style="width: 20%; height: 20%; "  src="images/smiling-icon.png" alt="">
+          <h3>20 %</h3>
+  
+   </div>
+
+    </main>
+
+
+    
+    
+    <!-- End Main -->
+  </div>
+
+ 
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
